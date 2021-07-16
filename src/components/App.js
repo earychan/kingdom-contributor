@@ -1,11 +1,13 @@
 import React from "react";
 import "./App.scss";
 
+// Importing the header
+import Header from "./Header";
+
 const App = () => {
   return (
     <div>
-      <h1>App</h1>
-      <h1>Ebraj</h1>
+      <Header/>
     </div>
   );
 };
