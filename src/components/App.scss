@@ -1,3 +1,6 @@
+// IBM Plex Sans
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@100;300;400;600;700&display=swap');
+
 // All about the mixins
 @mixin flex-container($direction,$align,$justify,$wrap){
     display: flex;
@@ -51,5 +54,25 @@
           font-size: $max-font-size;
         }
       }
+    }
+  }
+
+
+  // Colors
+  $primary-dark: #111111;
+  $primary-white : #eeeeff;
+
+// Universal Styling
+body{
+  font-family: 'IBM Plex Sans', sans-serif;
+}
+
+  .header{
+    background-color: $primary-dark;
+    color: $primary-white;
+    padding: 25px 0;
+
+    >h2{
+      text-align: center;
     }
   }
