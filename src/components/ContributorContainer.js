@@ -6,7 +6,7 @@ import ContributorItem from "./ContributorItem";
 const ContributorContainer = () => {
   return (
     <div className="container-1200">
-      <div>
+      <div className="contributor__container">
         <ContributorItem />
       </div>
     </div>

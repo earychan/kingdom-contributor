@@ -17,7 +17,7 @@
     width: 100%;
     max-width: $cont-width;
     margin: 0 auto;
-    padding: 35px 20px;
+    padding: 50px 20px;
 }
 
 // Different Classes
@@ -31,39 +31,12 @@
     @include container-width(1400px);
 }
 
-// Stuffs related to the fluid typography from the CSS tricks
-@function strip-unit($value) {
-    @return $value / ($value * 0 + 1);
-  }
-  
-@mixin fluid-type($min-vw, $max-vw, $min-font-size, $max-font-size) {
-    $u1: unit($min-vw);
-    $u2: unit($max-vw);
-    $u3: unit($min-font-size);
-    $u4: unit($max-font-size);
-  
-    @if $u1 == $u2 and $u1 == $u3 and $u1 == $u4 {
-      & {
-  
-        font-size: $min-font-size;
-        @media screen and (min-width: $min-vw) {
-          font-size: calc(#{$min-font-size} + #{strip-unit($max-font-size - $min-font-size)} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)}));
-        }
-  
-        @media screen and (min-width: $max-vw) {
-          font-size: $max-font-size;
-        }
-      }
-    }
-  }
-
-
   // Colors
   $primary-dark: #12181b;
   $secondary-dark: #2a2e357e;
   $primary-white : #ffffff;
   $primary-gray : #b2becd;
-  $primary-gray-border : #a9abb356;
+  $primary-gray-border : #a9abb33a;
 
 // Universal Styling
 body{
@@ -76,18 +49,47 @@ body{
     color: $primary-white;
     padding: 20px 0;
     border-bottom: 1px solid $primary-gray-border;
-
+    position: relative;
+    &::after{
+      content: '🔥';
+      position: absolute;
+      font-size: 2rem;
+      bottom: 0;
+      text-align: center;
+      transform: translate(0,50%);
+      width: 100%;
+    }
+    
     >h2{
       text-align: center;
     }
   }
 
 
+//Styling the contributorcontainer
+.contributor__container{
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  grid-gap: 25px;
+  place-content: center;
+
+  @media screen and (max-width:985px){
+    grid-template-columns: repeat(3,1fr);
+  }
+  @media screen and (max-width:720px){
+    grid-template-columns: repeat(2,1fr);
+  }
+  @media screen and (max-width:500px){
+    grid-template-columns: 1fr;
+  }
+}
+
 //Styling the contribution Item
 .contributor__item{
+  margin: 0 auto;
   min-width: min-content;
   width: 100%;
-  max-width: 290px;
+  max-width: 320px;
   background-color: $secondary-dark;
   backdrop-filter: blur(400px);
   border: 1px solid $primary-gray-border;
@@ -97,12 +99,12 @@ body{
   text-align: center;
 
   #{&}--img{
+    position: relative;
     >img{
       border-radius: 20px;
       height: 100%;
       width: 100%;
       object-fit: cover;
-      // filter: grayscale(80%);
     }
   }
 
