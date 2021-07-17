@@ -59,12 +59,11 @@
 
 
   // Colors
-  $primary-dark: #000000;
-  $secondary-dark: #060707;
-  $tertiary-dark: #151618;
-  $primary-white : #eeeeff;
-  $primary-gray : #666666;
-  $primary-gray-border : #a9abb31f;
+  $primary-dark: #12181b;
+  $secondary-dark: #2a2e357e;
+  $primary-white : #ffffff;
+  $primary-gray : #b2becd;
+  $primary-gray-border : #a9abb356;
 
 // Universal Styling
 body{
@@ -90,7 +89,9 @@ body{
   width: 100%;
   max-width: 290px;
   background-color: $secondary-dark;
+  backdrop-filter: blur(400px);
   border: 1px solid $primary-gray-border;
+  box-shadow: 2.5px 2.5px 30px 0px rgba(0, 0, 0, 0.082);
   border-radius: 20px;
   padding: 20px;
   text-align: center;
