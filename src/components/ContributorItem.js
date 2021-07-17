@@ -12,8 +12,12 @@ const ContributorItem = () => {
         <p>Enthusiastic Lad who loves designing & coding.</p>
       </div>
       <div className="contributor__item--social">
-        <a href="https://github.com/ebraj">GitHub</a>
-        <a href="https://www.linkedin.com/in/ebrajgrg/">LinkedIn</a>
+        <a href="https://github.com/ebraj" target="blank">
+          GitHub
+        </a>
+        <a href="https://www.linkedin.com/in/ebrajgrg/" target="blank">
+          LinkedIn
+        </a>
       </div>
     </div>
   );

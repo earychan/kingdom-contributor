@@ -110,6 +110,7 @@ body{
       color: $primary-white;
       padding:15px 15px 0;
       font-weight: 700;
+      font-size: 1.25rem;
     }
     >p{
       color: $primary-gray;
@@ -122,6 +123,7 @@ body{
   #{&}--social{
     a{
       margin: 10px;
+      font-size: 1.05rem;
       padding: 5px 0;
       display: inline-block;
       color: $primary-gray;
