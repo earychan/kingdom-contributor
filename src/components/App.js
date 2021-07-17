@@ -3,11 +3,13 @@ import "./App.scss";
 
 // Importing the header
 import Header from "./Header";
+import ContributorContainer from "./ContributorContainer";
 
 const App = () => {
   return (
     <div>
-      <Header/>
+      <Header />
+      <ContributorContainer />
     </div>
   );
 };
