@@ -133,16 +133,18 @@ body{
   }
 
   #{&}--social{
+    @include flex-container(row, center, center, nowrap);
+    border-top: 1px solid $primary-gray-border;
     a{
       margin: 10px;
       font-size: 1.05rem;
-      padding: 5px 0;
+      padding: 5px 0 0;
       display: inline-block;
-      color: $primary-gray;
-      border-bottom: 1px solid $primary-gray;
-      &:hover{
-        color: $primary-white;
-        border-bottom: 1px solid $primary-white;
+      svg{
+        fill: $primary-gray;
+        &:hover{
+          fill: $primary-white;
+        }
       }
     }
   }
