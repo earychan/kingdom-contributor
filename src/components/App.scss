@@ -100,12 +100,21 @@ body{
 
   #{&}--img{
     position: relative;
-    >img{
-      border-radius: 20px;
-      height: 100%;
-      width: 100%;
-      object-fit: cover;
-    }
+    height: 200px;
+    width: 100%;
+    background-color: greenyellow;
+    border-radius: 20px;
+    font-size: 3.5rem;
+    font-weight: 900;
+    color: transparent;
+    -webkit-text-stroke: 1px $primary-dark;
+    @include flex-container(row, center, center, wrap);
+    // >img{
+    //   border-radius: 20px;
+    //   height: 100%;
+    //   width: 100%;
+    //   object-fit: cover;
+    // }
   }
 
   #{&}--desc{

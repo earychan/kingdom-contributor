@@ -1,21 +1,23 @@
 import React from "react";
 import Ebraj from "../images/ebraj.jpg";
 
-const ContributorItem = () => {
+const ContributorItem = (props) => {
+  const { allDetail } = props;
+  const { shortForm, name, intro, githubLink, linkedInLink, instagramLink } =
+    allDetail;
+  console.log(allDetail);
   return (
     <div className="contributor__item">
-      <div className="contributor__item--img">
-        <img src={Ebraj} alt="Ebraj" />
-      </div>
+      <div className="contributor__item--img">{shortForm}</div>
       <div className="contributor__item--desc">
-        <h2>Ebraj Gurung</h2>
-        <p>Enthusiastic Lad who loves designing & coding.</p>
+        <h2>{name}</h2>
+        <p>{intro}</p>
       </div>
       <div className="contributor__item--social">
-        <a href="https://github.com/ebraj" target="blank">
+        <a href={githubLink} target="blank">
           GitHub
         </a>
-        <a href="https://www.linkedin.com/in/ebrajgrg/" target="blank">
+        <a href={linkedInLink} target="blank">
           LinkedIn
         </a>
       </div>
