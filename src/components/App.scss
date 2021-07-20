@@ -44,6 +44,14 @@ body{
   background-color: $primary-dark;
 }
 
+// All about the theme
+.greenyellow{
+  background: linear-gradient(90deg, rgba(116,255,138,1) 0%, rgba(0,224,96,1) 100%);
+}
+.purple{
+  background: linear-gradient(146deg, rgba(216,174,251,1) 0%, rgba(174,63,255,1) 100%);
+}
+
   .header{
     background-color: $primary-dark;
     color: $primary-white;
@@ -102,7 +110,6 @@ body{
     position: relative;
     height: 200px;
     width: 100%;
-    background-color: greenyellow;
     border-radius: 20px;
     font-size: 3.5rem;
     font-weight: 900;

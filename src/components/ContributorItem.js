@@ -3,12 +3,11 @@ import Ebraj from "../images/ebraj.jpg";
 
 const ContributorItem = (props) => {
   const { allDetail } = props;
-  const { shortForm, name, intro, githubLink, linkedInLink, instagramLink } =
-    allDetail;
-  console.log(allDetail);
+  const { shortForm, name, intro, githubLink, linkedInLink, instagramLink,theme } =
+    allDetail;  
   return (
     <div className="contributor__item">
-      <div className="contributor__item--img">{shortForm}</div>
+      <div className={`contributor__item--img ${theme ? theme : "greenyellow"}`}>{shortForm}</div>
       <div className="contributor__item--desc">
         <h2>{name}</h2>
         <p>{intro}</p>
